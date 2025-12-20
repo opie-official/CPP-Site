@@ -123,9 +123,22 @@ const buttons: BtnProps[][]=[
 
 
 
-export default function Footer(){
+interface Props{
+    is?: boolean
+}
+
+
+export default function Footer(props: Props){
     return (
-        <footer id={"footer"}>
+        <footer id={"footer"} style={
+            props.is?{
+                position: "absolute",
+                top: "60%"
+            }:{
+              position: "relative",
+                marginTop: "5%"
+            }
+        }>
             <div id={"footer-sections"}>
                 {section_titles.map((el, key)=>{
                     return <FooterSection title={el} buttons={buttons[key]} key={key}/>

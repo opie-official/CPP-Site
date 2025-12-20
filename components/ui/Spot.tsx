@@ -7,6 +7,7 @@ interface Props{
     height: number;
     x: number;
     y: number;
+    is?:boolean
 }
 
 
@@ -18,7 +19,7 @@ export default function Spot(props: Props){
     return (
         <div className={"spot"}
         style={{
-            position: "absolute",
+            position: !props.is?"absolute":"relative",
             top: `${props.y}%`,
             left: `${props.x}%`,
             width: `${props.width}%`,

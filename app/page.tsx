@@ -10,18 +10,20 @@ import SixthPage from "@/components/pages/main/SixthPage";
 
 
 export default function Home() {
-  return (
-      <div id={"main-page"}>
-          <NavBar/>
-          <div className={"page-scroll"}>
 
-              <FirstPage/>
-              <SecondPage/>
-              <ThirdPage/>
-              <FourthPage/>
-              <FifthPage/>
-              <SixthPage/>
-          </div>
-      </div>
-  );
+
+    return (
+        <div id={"main-page"}>
+            <NavBar/>
+            <div className={"page-scroll"}>
+
+                <FirstPage/>
+                <SecondPage/>
+                <ThirdPage/>
+                <FourthPage/>
+                <FifthPage/>
+                <SixthPage/>
+            </div>
+        </div>
+    );
 }
