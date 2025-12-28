@@ -56,6 +56,9 @@ export default function NavBar() {
 
     const buttons: BtnProps[] =[
         {
+            text: "Examples",
+            path: "/examples"
+        },{
             text: "Playground",
             path: "/playground"
         },

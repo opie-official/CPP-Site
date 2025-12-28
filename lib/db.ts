@@ -50,7 +50,18 @@ namespace API {
 
     }
 
-
+    export function __getExamples(){
+        db = new Database(db_path);
+        const res = db.prepare("SELECT * FROM examples").all();
+        db.close();
+        return res;
+    }
+    export function __getExampleById(id: number) {
+        db = new Database(db_path);
+        const res = db.prepare("SELECT * FROM examples WHERE id=?").get(id);
+        db.close();
+        return res;
+    }
 }
 
 

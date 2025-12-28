@@ -41,6 +41,8 @@
 }
 
 #nav-general{
+    /*margin-top: 2%;*/
+    /*margin-left: 2%;*/
     width: 10%;
     height: 100%;
     display: flex;
@@ -56,5 +58,8 @@
         gap: 15%;
         font-size: 13pt;
         color: white;
+        &>img{
+            height: 100%;
+        }
     }
 }

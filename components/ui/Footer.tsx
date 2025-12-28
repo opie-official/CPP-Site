@@ -127,6 +127,7 @@ interface Props{
     is?: boolean;
     height?:number;
     margin?: number;
+    top?:number;
 }
 
 
@@ -135,11 +136,12 @@ export default function Footer(props: Props){
         <footer id={"footer"} style={
             props.is?{
                 position: "absolute",
-                top: "60%",
+                top: props.top?`${props.top}%`: "60%",
                 height: props.height && `${props.height}vh !important`
             }:{
               position: "relative",
                 marginTop: props.margin?`${props.margin}%`:"5%",
+                top: props.top?`${props.top}%`: "0",
                 height: props.height && `${props.height}vh !important`
 
             }

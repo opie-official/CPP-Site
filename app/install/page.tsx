@@ -21,7 +21,7 @@ export default function Install(){
             <div id={"install-pages"}>
                 <FirstPage/>
                 <SecondPage/>
-                <Footer margin={-10} is={false} height={40}/>
+                <Footer margin={-10} is top={650} height={33}/>
             </div>
         </div>
     )

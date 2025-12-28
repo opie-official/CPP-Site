@@ -1,0 +1,10 @@
+#example-page {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+

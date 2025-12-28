@@ -5,7 +5,10 @@ interface Props{
     text: string;
     classname?:string;
     visible: boolean;
-    setVisible: (i:boolean)=>void
+    setVisible: (i:boolean)=>void;
+    width?:number
+    height?:number
+    margin?:string;
 }
 
 
@@ -19,16 +22,17 @@ export default function Code(props: Props){
     return (
         <div className={["code", props.classname].join(" ")}
             style={{
-                background:"var(--bg)",
-                width: "50%",
-                height: "12%",
+                margin: props.margin&&props.margin,
+                background:`#090909`,
+                width: props.width?`${props.width}%`: "50%",
+                height: props.height?`${props.height}%`: "12%",
                 display:"flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "start",
                 color: "var(--subtitle)",
                 font:"12pt 'Roboto Light'",
-                paddingLeft: "1%"
+                padding: "2% 1%"
 
             }}
              onClick={click}
