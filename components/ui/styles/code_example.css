@@ -31,6 +31,10 @@
     }
 }
 
+.code-example-selected{
+    color: white !important;;
+}
+
 
 #code-example-scroll{
     margin-top:2%;

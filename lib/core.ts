@@ -25,3 +25,8 @@ interface IArticle{
     name: string;
     anchor: string;
 }
+
+interface AsideArticle {
+    id: string;
+    title: string;
+}

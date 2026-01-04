@@ -409,6 +409,7 @@ export default function CodeExample() {
         <div id={"code-example-label"}>
             {names.map((el, key) => {
                 return <button
+                   className={cell==key? "code-example-selected":""}
                     key={key}
                     onClick={() => {setCell(key); setOpac(0)}}
                     ref={el => {

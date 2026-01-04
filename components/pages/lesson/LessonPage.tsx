@@ -14,25 +14,21 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {oneDark, darcula, materialDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Spot from "@/components/ui/Spot";
 
-
 interface Props {
     lessons: ILesson[];
     lesson: number;
     lesson_: ILesson
 }
 
-interface AsideArticles {
-    id: string;
-    title: string;
-}
+
 
 
 function Aside(props: { lesson: number }) {
-    const [articles, setArticles]=useState<AsideArticles[]>([])
+    const [articles, setArticles]=useState<AsideArticle[]>([])
     useEffect(() => {
         const root = document.getElementById("lesson-text") as HTMLDivElement;
         const h = [...root.querySelectorAll("h1")];
-        const list: AsideArticles[] = []
+        const list: AsideArticle[] = []
         for (let index=0;index<h.length;index++){
             list.push({
                 id: h[index].id,
