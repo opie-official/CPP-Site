@@ -1,12 +1,13 @@
 .create-info{
     width: 30%;
     height: 40%;
-    background: var(--fg);
+    background: linear-gradient(#25252590, #25252570);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 1%;
     padding: 1%;
+    backdrop-filter: blur(50px);
 }
 
 .create-info-logo{
