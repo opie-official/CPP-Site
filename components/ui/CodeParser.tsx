@@ -49,6 +49,15 @@ const kw = [
     "constexpr",
     "constinit",
     "consteval",
+    "template",
+    "typename",
+    "requires",
+    "concept",
+    "explicit",
+    "using",
+    "namespace",
+    "typedef",
+    "decltype",
     "",
 ]
 type RuleName = "preproc" | "lib" | "string" | "numb" | "oper" | "id"|"spec" | "comment";
@@ -169,8 +178,9 @@ export default function CodeParser({text}: Props) {
     const segs = toSegments(text, tokens);
 
     return (
+
         <div className={"code-layer"}>
-            <>{renderSegments(segs)}</>
+            <pre>{renderSegments(segs)}</pre>
         </div>
     );
 }

@@ -77,7 +77,7 @@ export default function SecondPage() {
 
     return (
         <div id={"main-second-page"}>
-            <Spot x={40} y={50} width={100} height={100} />
+            <Spot x={60} y={0} width={100} height={200} />
             <Title text={"Latest News"}/>
             <div id={"main-second-news"}>
                 {posts.map((el, i)=><News key={i} {...el}/>)}

@@ -16,7 +16,6 @@
 }
 
 
-/* нижний фон */
 .button > button .button-bg {
     position: absolute;
     inset: 0;
@@ -25,7 +24,6 @@
     z-index: 0;
 }
 
-/* hover-фон */
 .button > button .button-bg::after {
     content: "";
     position: absolute;
@@ -36,10 +34,9 @@
 }
 
 .button > button:hover .button-bg::after {
-    opacity: 1;
+    opacity: 0.6;
 }
 
-/* текст */
 .button > button .button-text {
     position: relative;
     z-index: 1;

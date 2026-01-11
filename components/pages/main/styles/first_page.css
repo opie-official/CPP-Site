@@ -1,4 +1,4 @@
-#main-first-page{
+#main-first-page {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -6,7 +6,7 @@
 
 }
 
-#main-first-right{
+#main-first-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,36 +14,41 @@
     width: 50%;
 }
 
-#main-logo{
+#main-logo {
+    /*background: black;*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 70%;
     width: 100%;
-    gap: 5%;
+    /*margin: 10% 0;*/
+    /*border-radius: 40px;*/
+    gap: 1%;
 }
-#main-title{
+
+#main-title {
     color: white;
     font-size: 100pt;
-    font-family: "Roboto medium", serif;
+    font-family: "Roboto Medium", serif;
 }
 
-#main-subtitle{
-    color: #979797;
-    font-size: 25pt;
-    font-family: "Roboto Light", serif;
-    width: 70%;
-}
-
-#main-annotation{
+#main-subtitle {
     color: #979797;
     font-size: 20pt;
+    font-family: "Roboto", serif;
+    width: 70%;
+}
+
+#main-annotation {
+    color: #979797;
+    margin-top: 2%;
+    font-size: 18pt;
     font-family: "Roboto Light", serif;
     width: 70%;
 }
 
-#main-buttons{
+#main-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,20 +60,10 @@
     bottom: 5%;
 }
 
-.pop{
-    position: absolute;
-    width: 120%;
-    height: 70%;
-    bottom: 65%;
-    right: 25%;
-    background: radial-gradient(ellipse 50.00% 50.00% at 50.00% 50.00%, rgba(25.25, 82.69, 255, 0.19) 0%, rgba(115, 115, 115, 0) 100%);
-    opacity: 0.75;
-}
-
-#main-first-img{
+#main-first-img {
     width: 50%;
 
-    &>img{
+    & > img {
         width: 80%;
         position: absolute;
         top: 10%;
@@ -76,3 +71,32 @@
     }
 }
 
+#main-first-img2 {
+    position: relative;
+    top: 5%;
+    height: 60%;
+    width: 45%;
+    background: #050505;
+
+}
+
+
+#main-first-code {
+    padding: 3%;
+    border-radius: 40px;
+    position: absolute;
+    width: 45%;
+    height: 65%;
+    left: 50%;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    & * {
+        font-size: 25pt;
+    }
+
+    background: #030303;
+}
