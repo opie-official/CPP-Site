@@ -37,10 +37,10 @@
     justify-content: start;
     align-items: center;
 
-
     & * {
         color: #454545;
         font-size: 12px;
+        text-align: end;
 
 
     }

@@ -8,6 +8,7 @@ import Title from "@/components/ui/Title";
 import News from "@/components/ui/News";
 import Button from "@/components/ui/Button";
 import Spot from "@/components/ui/Spot";
+import Button2 from "@/components/ui/Button2";
 
 
 const news = [
@@ -81,7 +82,7 @@ export default function SecondPage() {
             <div id={"main-second-news"}>
                 {posts.map((el, i)=><News key={i} {...el}/>)}
             </div>
-            <Button id={"main-blog-button"} text={"Our Blog"} path={"/blog"}/>
+            <Button2 image={"/arrow.svg"} id={"main-blog-button"} text={"Our Blog"} path={"/blog"}/>
         </div>
     )
 }

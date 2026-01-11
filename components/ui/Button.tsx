@@ -10,14 +10,16 @@ interface Props{
     path: string;
     id?:string
     classname?:string;
+    transparent?: boolean;
 }
 
 
 
 export default function Button(props: Props){
     return (
-        <Link id={props.id} className={["button", props.classname].join(" ")} href={props.path}>
-            <button>
+        <Link id={props.id} className={["button", props.classname].join(" ")} href={props.path}
+        >
+            <button >
                 {props.text}
             </button>
         </Link>

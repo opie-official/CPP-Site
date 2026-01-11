@@ -138,7 +138,7 @@ interface Props {
 }
 
 
-const regex = /[\n\t\r\s]|#\s*\w+|(?<=#\s*\w+\s*)(<.+?>|".+?")|\d+(\.\d+)?|'.*?'|".*?"|[+\-*\/%=:;.,^<>!~|&()\[\]{}?]+|\w+/gm;
+const regex = /[\n\t\r\s]|#\s*\w*|(<.+?>|".+?")|\b\d+(\.\d+)?\b|'.*?'|".*?"|[+\-*\/%=:;.,^<>!~|&()\[\]{}?]+|\b\w+\b/gm;
 
 
 const enum Typ {
@@ -238,12 +238,12 @@ interface Token {
     length: number;
 }
 
-const word = /[A-Za-z_]\w+/gm
+const word = /\b[A-Za-z_]\w+\b/gm
 const oper = /[+\-*\/%=:;.,^<>!~|&()\[\]{}?]+/gm
 const lib = /<.+?>|".+?"/gm
 const preproc = /#\s*\w+/gm
 const str = /".*?"|'.*?'/gm
-const num = /\d+(\.\d+)?/gm
+const num = /\b\d+(\.\d+)?\b/gm
 const spec = /[\s\t\r]/gm
 
 
