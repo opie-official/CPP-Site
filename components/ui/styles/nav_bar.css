@@ -33,13 +33,19 @@
         background: transparent;
         color: white;
         font-size: 13pt;
-        /*border-radius:20pt;*/
         transition: 0.2s all;
+        border-bottom: 1px solid transparent;
         &:hover{
-            background: rgba(255,255,255,0.1);
+            border-bottom: 1px solid white;
+            /*background: rgba(255,255,255,0.1);*/
         }
     }
+    &> .nav-button-active{
+        border-bottom: 1px solid white !important;
+    }
 }
+
+
 
 #nav-general{
     /*margin-top: 2%;*/

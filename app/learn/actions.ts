@@ -5,13 +5,15 @@
 
 
 import API from "@/lib/db";
-import __getChapters = API.__getChapters;
-import __getLessons = API.__getLessons;
+
 
 export async function GetChapters(){
-    return __getChapters()
+    console.log(JSON.stringify(API))
+    console.log(API.__getChapters)
+    return  API.__getChapters();
 }
 
 export async function GetLessons(){
-    return __getLessons();
+    return API.__getLessons();
+
 }

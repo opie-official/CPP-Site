@@ -55,7 +55,7 @@ export default async function Lesson(props: Props) {
     let lesson_: ILesson = await getLessonsById(+lesson) as ILesson;
 
     return (<div id={"lesson-page"}>
-            <NavBar/>
+            <NavBar type={"Learn"}/>
             <LessonPage lesson={+lesson} lessons={lessons} lesson_={lesson_}/>
         </div>
     )

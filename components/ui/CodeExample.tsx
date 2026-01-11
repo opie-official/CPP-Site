@@ -376,6 +376,9 @@ function Line(props: LineProps) {
                 setPrevWidth(props.width);
                 setPrevLeft(props.left);
             }}
+            transition={{
+                ease:"easeInOut"
+            }}
 
         >
             <div id={"code-example-line"}

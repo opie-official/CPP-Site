@@ -9,10 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.47",
     "better-sqlite3": "^12.5.0",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.26",
     "markdown-to-jsx": "^9.4.2",
     "next": "16.1.0",
+    "pg": "^8.16.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
@@ -20,7 +23,8 @@
     "rehype-raw": "^7.0.0",
     "rehype-sanitize": "^6.0.0",
     "remark-breaks": "^4.0.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

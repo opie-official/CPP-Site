@@ -20,7 +20,7 @@ export default function Install(){
 
     return (
         <div id={"install-page"}>
-            <NavBar/>
+            <NavBar type={"Install"}/>
             <div id={"install-in"}>
                 <div id={"install-scroll"}>
                     <div id={"install-in2"}>

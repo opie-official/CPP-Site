@@ -42,7 +42,7 @@ export default async function Example(props: Props){
 
     return (
         <div id={"example-page"}>
-            <NavBar/>
+            <NavBar type={"Examples"}/>
                 {data?<ExampleContent rows={rows} id={example} data={data}/>
                 : <p
                     style={{

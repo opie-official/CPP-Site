@@ -12,7 +12,8 @@ import Link from "next/link";
  */
 interface BtnProps{
     text: string;
-    path: string
+    path: string;
+    active: boolean;
 }
 
 /**
@@ -23,7 +24,7 @@ interface BtnProps{
 function NavButton(props: BtnProps){
     return (
         <Link href={props.path} className={"nav-button"}>
-            <button >
+            <button className={props.active? "nav-button-active":""}>
                 {props.text}
             </button>
         </Link>
@@ -47,14 +48,20 @@ function NavGeneral() {
     )
 }
 
+interface Props{
+    type: string;
+}
+
+
+
 /**
  *
  * @constructor
  */
-export default function NavBar() {
+export default function NavBar(props: Props) {
 
 
-    const buttons: BtnProps[] =[
+    const buttons =[
         {
             text: "Examples",
             path: "/examples"
@@ -81,7 +88,7 @@ export default function NavBar() {
         <div id={"nav-bar"}>
             <NavGeneral/>
             <div id={"nav-buttons"}>
-                {buttons.map((el,i)=> <NavButton {...el} key={i}/>)}
+                {buttons.map((el,i)=> <NavButton active={el.text==props.type} {...el} key={i}/>)}
             </div>
         </div>
     )

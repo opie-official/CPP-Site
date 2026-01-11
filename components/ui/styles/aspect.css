@@ -8,6 +8,13 @@
     height: 50%;
     gap: 18%;
     padding: 1%;
+    transition: all 0.2s;
+    border: 1px solid transparent;;
+    border-radius: 30px;
+    &:hover{
+        background: #202020;
+        backdrop-filter: blur(100px);
+    }
 }
 
 .aspect-title{

@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <div id={"main-page"}>
-            <NavBar/>
+            <NavBar type={""}/>
             <div className={"page-scroll"}>
 
                 <FirstPage/>

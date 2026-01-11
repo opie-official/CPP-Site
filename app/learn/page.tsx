@@ -16,7 +16,7 @@ export default function Learn(){
 
     return (
         <div id={"learn"}>
-            <NavBar/>
+            <NavBar type={"Learn"}/>
             <LearnPage/>
         </div>
     )

@@ -12,7 +12,6 @@ export default async function LearnPage() {
     console.log(chapters);
     const lessons: ILesson[] = await GetLessons() as ILesson[];
 
-    console.log(lessons)
     return (
         <div id={"learn-page"}>
             <div id={"learn-inner"}>

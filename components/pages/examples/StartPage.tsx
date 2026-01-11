@@ -4,6 +4,7 @@ import ExampleEl from "@/components/ui/ExampleEl";
 import React from "react";
 import Footer from "@/components/ui/Footer";
 import NavBar from "@/components/ui/NavBar";
+import {GetExamples} from "@/app/examples/actions";
 
 
 
@@ -11,13 +12,13 @@ import NavBar from "@/components/ui/NavBar";
 
 
 
-export default function StartPage(){
+export default async function StartPage(){
 
-    const examples: IExample[] = API.__getExamples() as IExample[];
+    const examples: IExample[] = await GetExamples() as IExample[];
 
     return (
         <div id={"examples-start-page"}>
-            <NavBar/>
+            <NavBar type={"Examples"}/>
             <p id={"examples-start-p"}>C++ Code Examples</p>
             <div className={"examples-start-div"}>There you can see many c++ code examples</div>
             <div id={"examples-start-examples"}>

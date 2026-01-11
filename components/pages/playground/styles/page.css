@@ -1,0 +1,158 @@
+
+#playground-code {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background: #090909;
+    border-radius: 10px;
+
+}
+
+#playground-in {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    overflow: scroll;
+
+}
+
+#playground-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1%;
+    width: 100%;
+}
+
+
+#playground-rows {
+    border-right: 1px solid #454545;
+    width: 5%;
+    display: flex;
+    flex: 0 0 5%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+
+    & * {
+        color: #454545;
+        font-size: 12px;
+
+
+    }
+
+}
+
+#playground-text {
+    width: 95%;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+#playground-sizer {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#playground-light,
+#playground-raw {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+}
+
+#playground-light {
+    z-index: 10;
+    pointer-events: none;
+}
+
+#playground-raw {
+    z-index: 20;
+    resize: none;
+    background: transparent;
+    caret-color: white;
+    color: transparent;
+    border: none;
+    outline: none;
+}
+
+#playground-sizer,
+#playground-light,
+#playground-raw,
+.code-layer,
+.code-seg, #playground-rows * {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1.4;
+    tab-size: 4;
+    letter-spacing: 0;
+    font-variant-ligatures: none;
+    box-sizing: border-box;
+}
+
+#playground-sizer,
+#playground-light,
+#playground-raw,
+.code-layer {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+#playground-light,
+#playground-raw {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+#playground-light {
+    z-index: 10;
+    pointer-events: none;
+}
+
+#playground-light,
+#playground-light * {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+}
+
+#playground-raw,
+#playground-light,
+#playground-light * {
+    font-variant-ligatures: none;
+    font-kerning: none;
+    font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
+    letter-spacing: 0;
+
+}
+
+#playground-raw {
+    z-index: 20;
+    resize: none;
+    background: transparent;
+    caret-color: white;
+    color: transparent;
+    outline: none;
+    overflow: hidden;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    text-indent: 0 !important;
+}
+
+#playground-sizer {
+    visibility: hidden;
+    pointer-events: none;
+}
