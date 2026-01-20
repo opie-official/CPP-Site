@@ -40,7 +40,7 @@ export default function FirstPage() {
                 <div id={"main-logo"}>
                     <p id={"main-title"}>C++</p>
                     <p id={"main-subtitle"}>the language in which everything is written</p>
-                    <p id={"main-annotation"}>A powerful and fast language that is used to write low-level systems.</p>
+                    {/*<p id={"main-annotation"}>A powerful and fast language that is used to write low-level systems.</p>*/}
                 </div>
                 <div id={"main-buttons"}>
                     <Button text={"Get started"} path={"/learn"}/>
