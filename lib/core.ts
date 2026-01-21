@@ -38,8 +38,13 @@ interface AsideArticle {
     top: number;
 }
 
-interface AsideArticleEx {
-    id: string;
-    title: string;
 
+
+
+interface ScrollElemProps {
+    title: string;
+    classname?: string;
+    id?: string;
+    handle?: () => void;
+    active?: boolean;
 }

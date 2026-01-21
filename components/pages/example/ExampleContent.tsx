@@ -3,12 +3,7 @@ import "./styles/example-content.css"
 
 import Page from "@/components/pages/example/Page";
 import React, {useEffect, useState} from "react";
-
-interface Props {
-    id: string;
-    data: IExample;
-    rows: IExample[]
-}
+import Scroll from "@/components/ui/Scroll";
 
 function Aside(props: { id: string }) {
 
@@ -52,32 +47,6 @@ interface Aside2Props {
 }
 
 
-interface ScrollElemProps {
-    title: string;
-    classname?: string;
-    id?: string;
-    handle?: () => void;
-    active?: boolean;
-}
-
-interface ScrollProps {
-    in: ScrollElemProps[]
-}
-
-function Scroll(props: ScrollProps) {
-    return (
-        <div className={"scroll-component"}>
-            <div className={"scroll-component-in"}>
-                {props.in.map((el, key) =>
-                    <button
-                        className={el.active ? [el.classname, "example-active"].join(" ") : [el.classname].join(" ")}
-                        key={key} id={el.id} onClick={el.handle}>{el.title}</button>
-                )}
-            </div>
-        </div>
-    )
-}
-
 
 function Aside2(props: Aside2Props) {
     useEffect(() => {
@@ -106,6 +75,15 @@ function Aside2(props: Aside2Props) {
         </div>
     </div>)
 }
+
+
+
+interface Props {
+    id: string;
+    data: IExample;
+    rows: IExample[]
+}
+
 
 export default function ExampleContent(props: Props) {
 
