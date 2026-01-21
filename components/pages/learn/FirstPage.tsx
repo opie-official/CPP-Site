@@ -68,7 +68,7 @@ export default function FirstPage(props: Props) {
             <div id={"learn-start"}>
                 <div id={"learn-code"}>
                     <div id={"learn-code-filter"}></div>
-                    <pre style={{zIndex:10}}>
+                    {/*<pre style={{zIndex:10}}>
                      <CodeParser text={`
 #include <atomic>template<typename T>class SPSCQueue {public: explicit 
 SPSCQueue(size_t size): size_(size), buffer_(new T[size]) {}~SPSCQueue() 
@@ -80,7 +80,7 @@ return false;value = buffer_[tail];tail_.store((tail + 1) % size_, std::memory_o
 return true;}private:size_t size_;T* buffer_;size_t head_ = 0;
 std::atomic<size_t> tail_{0};};
                     `}/>
-                    </pre>
+                    </pre>*/}
                     <div id={"learn-code-filter2"}></div>
                 </div>
                 <StartMenu href={`/learn/lesson?lesson=${props.last}`} last={props.last} chapters={props.chapters}/>

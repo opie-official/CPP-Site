@@ -6,10 +6,10 @@ import Button from "@/components/ui/Button";
 
 
 const books=[
-    "/literature1.png",
-    "/literature2.png",
-    "/literature3.png",
-    "/literature4.png",
+    "/book1.jpg",
+    "/book2.jpg",
+    "/book3.jpg",
+    "/book4.jpg",
 ]
 interface BookProps{
     src: string;

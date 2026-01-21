@@ -48,8 +48,9 @@
     width: 50%;
 }
 
-#learn-second-book{
-    height: 60%;
+.learn-second-book{
+    height: 80%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
