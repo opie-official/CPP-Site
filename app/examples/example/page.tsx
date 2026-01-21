@@ -26,9 +26,7 @@ export async function generateMetadata(props: Props): Promise<{title: string}>{
     }
 }
 export default async function Example(props: Props){
-
     const {example} = await props.searchParams;
-
     const rows = await API.__getExamples() as IExample[];
     const data = rows.find(el=>el.id==+example);
 

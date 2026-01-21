@@ -1,6 +1,7 @@
 
 :root {
   --bg: #131313;
+  --bg2: #0e0e0e;
   --fg: #252525;
   --subtitle: #BABABA;
   --button: linear-gradient(20deg, #1f62bd, #0d55b4);

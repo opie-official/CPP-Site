@@ -1,17 +1,27 @@
-#example-content{
+#example-content {
     display: flex;
     flex: 1 1 auto;
     height: 100%;
     overflow-x: hidden;
 }
-#example-aside{
-    width: 15%;
-    border-right: 1px solid var(--subtitle);
+
+#example-aside {
+    width: 20%;
+    /*border-right: 1px solid var(--subtitle);*/
     height: 100%;
     overflow: visible;
 }
 
-#example-aside-in{
+#example-aside-p
+{
+    margin-top: 6vh;
+    color: white;
+    font: 20pt Roboto;
+    width: 100%;
+
+}
+
+#example-aside-in {
     width: 100%;
     height: 90%;
     display: flex;
@@ -21,7 +31,8 @@
     gap: 2%;
     margin-top: 30%;
     overflow-y: scroll;
-    &>a{
+
+    & > button {
         position: relative;
         left: 5%;
         display: flex;
@@ -31,9 +42,78 @@
         text-decoration: none;
         color: var(--subtitle);
         white-space: none;
-        &:hover{
+
+        &:hover {
             color: white;
         }
     }
 }
+.example-active{
+    color: var(--blue) !important;
+}
 
+
+#example-left-aside {
+    width: 20%;
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+#example-left-info {
+    width: 100%;
+    height: 20%;
+    margin-top: 6vh;
+}
+
+#example-left-scroll {
+    width: 100%;
+    height: 50%;
+    margin-top: 10%;
+    padding-left: 10%;
+}
+
+.scroll-component {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.scroll-component-in {
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2%;
+
+    &>button{
+        background: transparent;
+        margin-top: 3vh;
+        position: relative;
+        left: 5%;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--subtitle);
+        white-space: none;
+        &:hover {
+            color: white;
+        }
+    }
+}
+#example-left-current{
+    margin-top: 20%;
+    margin-left: 5%;
+    color: white;
+    font: 20pt Roboto;
+}
+
+#example-left-p{
+    color: white;
+    font: 15pt Roboto;
+    margin-left: 15%;
+}
