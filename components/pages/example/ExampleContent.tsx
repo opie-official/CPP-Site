@@ -17,7 +17,6 @@ function Aside(props: { id: string }) {
             list.push({
                 title: i.textContent,
                 handle() {
-                    console.log("scrolled", i.offsetTop)
                     root.scrollTo({
                         top: i.offsetTop,
                         left: 0,

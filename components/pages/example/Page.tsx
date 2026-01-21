@@ -41,10 +41,10 @@ export default function Page(props: Props) {
 
                     components={{
                         //@ts-ignore
-                        code: ({node, inline, className, children, ...props}) => {
+                        code: ({node, inline, className, children}) => {
                             return (
                                 <Code isCpp visible={visible} setVisible={setVisible}
-                                      text={children ? children.toString() : ""}/>
+                                      text={children ? children.toString() : ""} classname={"example-code"}/>
                             )
                         },
                         h1: ({children}) => {
@@ -65,7 +65,6 @@ export default function Page(props: Props) {
                 </ReactMarkdown>
             </div>
             <Alert text={"Code was copied"} setVisible={setVisible} visible={visible}/>
-            {/*<Footer is={false}/>*/}
             <div id={"example-buttons"}>
                 {(rows.length > 1) ?
                     <>

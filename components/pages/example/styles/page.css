@@ -5,8 +5,26 @@
     min-width: 0;
     min-height: 0;
     position: relative;
-    margin-left: 10%;
+    /*margin-left: 5%;*/
     overflow-y: auto;
     overflow-x:hidden;
+
 }
 
+
+
+#example-in{
+    width: 100%;
+    background: var(--bg2);
+    padding: 5%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+
+.example-code{
+    width: 100% !important;
+    border: 1px solid var(--subtitle);
+}
