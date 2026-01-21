@@ -5,7 +5,7 @@ import Page from "@/components/pages/example/Page";
 import React, {useEffect, useState} from "react";
 import Scroll from "@/components/ui/Scroll";
 
-function Aside(props: { id: string }) {
+function Aside(props: { id: string, visible:boolean }) {
 
     const [articles, setArticles] = React.useState<ScrollElemProps[]>([]);
 
@@ -27,7 +27,7 @@ function Aside(props: { id: string }) {
         }
         setArticles(list)
 
-    }, [props.id]);
+    }, [props.id, props.visible]);
 
     return (
         <aside id={"example-aside"}>
@@ -88,12 +88,13 @@ export default function ExampleContent(props: Props) {
 
 
     const {data, id, rows} = props;
+    const [visible, setVisible] = React.useState(false);
 
     return (
         <div id={"example-content"}>
             <Aside2 id={id} rows={rows} data={data}/>
-            <Page rows={rows} id={id} text={data.text_}/>
-            <Aside id={id}/>
+            <Page visible={visible} setVisible={setVisible} rows={rows} id={id} text={data.text_}/>
+            <Aside visible={visible} id={id}/>
 
         </div>
 

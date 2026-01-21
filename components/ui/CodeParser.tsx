@@ -1,5 +1,3 @@
-
-
 interface Props {
     text: string
 }
@@ -59,8 +57,16 @@ const kw = [
     "typedef",
     "decltype",
     "void",
+    "switch",
+    "case",
+    "break",
+    "continue",
+    "inline",
+    "static",
+    "default",
+    "",
 ]
-type RuleName = "preproc" | "lib" | "string" | "numb" | "oper" | "id"|"spec" | "comment";
+type RuleName = "preproc" | "lib" | "string" | "numb" | "oper" | "id" | "spec" | "comment";
 
 type Rule = {
     name: RuleName;
@@ -86,8 +92,6 @@ type Token = {
     rule: RuleName;
     priority: number;
 };
-
-
 
 
 function lex(text: string): Token[] {
@@ -157,7 +161,10 @@ const kwSet = new Set(kw);
 const KW_COLOR = "#CF8E6D";
 
 
-const show = (t: string) => t.replace(/ /g, "\u00A0");
+const show = (t: string) =>
+    t
+        .replace(/ /g, "\u00A0")
+        .replace(/\n/g, "\n");
 
 function renderSegments(segs: Segment[]) {
     return segs.map((s, idx) => {
@@ -167,18 +174,23 @@ function renderSegments(segs: Segment[]) {
         if (s.rule === "id" && kwSet.has(s.text)) color = KW_COLOR;
 
         return (
-            <span key={idx} className="code-seg" style={{ color }}>
+            <span key={idx} className="code-seg" style={{color}}>
         {show(s.text)}
       </span>
         );
     });
 }
+
 export default function CodeParser({text}: Props) {
     const tokens = lex(text);
     const segs = toSegments(text, tokens);
 
     return (
 
-            <pre>{renderSegments(segs)}</pre>
+        <>
+            {
+                renderSegments(segs)
+            }</>
+
     );
 }

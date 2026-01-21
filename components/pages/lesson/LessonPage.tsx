@@ -15,6 +15,8 @@ import React, {useEffect, useRef, useState} from "react";
 import Spot from "@/components/ui/Spot";
 import CodeParser from "@/components/ui/CodeParser";
 import Link from "next/link";
+import Code from "@/components/ui/Code";
+import Alert from "@/components/ui/Alert";
 
 interface Props {
     lessons: ILesson[];
@@ -189,6 +191,9 @@ export default function LessonPage(props: Props) {
     const [firstBt, setFirstBt] = useState(false);
     const [secondBt, setSecondBt] = useState(false);
 
+
+    const [visible,setVisible]=useState(false);
+
     const ref = useRef<HTMLDivElement>(null)
 
 
@@ -293,19 +298,18 @@ export default function LessonPage(props: Props) {
                                                    : // @ts-ignore
                                                    (codeEl?.props?.children?.toString?.() ?? "");
 
-                                           return (<div style={{
+                                           return (/*<div style={{
                                                background: "#090909",
                                                padding: "1% 3%",
                                                borderRadius: "20px"
-                                           }}>
-                                               <CodeParser text={text}/>
-                                           </div>)
+                                           }}>*/
+                                               <Code isCpp visible={visible} setVisible={setVisible} text={text}/>
+                                           /*</div>*/)
                                        },
                                        //@ts-ignore
                                        code({node, inline, className, children, ...props}) {
                                            // console.log(`inline ${inline}`)
-                                           return (<code
-                                           >{children?.toString() ?? ""}</code>)
+                                           return (<code className={".code"}>{children?.toString() ?? ""}</code>)
 
                                        },
                                        h1: ({children}) => {
@@ -326,7 +330,8 @@ export default function LessonPage(props: Props) {
                                        p(e) {
                                            return <p
                                                style={{
-                                                   margin: "3% 0"
+                                                   margin: "3% 0",
+                                                   paddingLeft: "2%"
                                                }}
                                            >{e.children}</p>
                                        }
@@ -343,5 +348,6 @@ export default function LessonPage(props: Props) {
             </div>
             <RightAside ref_to={ref} firstBt={firstBt} secondBt={secondBt} lesson={props.lesson}/>
 
+            <Alert visible={visible} setVisible={setVisible} text={"Text was copied"}/>
         </div>)
 }

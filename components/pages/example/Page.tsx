@@ -15,8 +15,28 @@ interface Props {
     text: string;
     id:string;
     // setArticles: React.Dispatch<React.SetStateAction<IArticle[]>>;
-    rows: IExample[]
+    rows: IExample[];
+    visible: boolean;
+    setVisible: React.Dispatch<React.SetStateAction<boolean>>
 
+}
+
+
+function extractText(node: React.ReactNode): string {
+    if (typeof node === "string" || typeof node === "number") {
+        return String(node);
+    }
+
+    if (Array.isArray(node)) {
+        return node.map(extractText).join("");
+    }
+
+    if (React.isValidElement(node)) {
+        // @ts-ignore
+        return extractText(node.props.children);
+    }
+
+    return "";
 }
 
 
@@ -25,7 +45,8 @@ export default function Page(props: Props) {
     const next = rows.find(el => el.id == +id + 1);
     const prev = rows.find(el => el.id == +id - 1);
 
-    const [visible, setVisible] = React.useState(false);
+    const {visible, setVisible}=props;
+
     const slugify = (s: string) =>
         s
             .toLowerCase()
@@ -41,10 +62,18 @@ export default function Page(props: Props) {
 
                     components={{
                         //@ts-ignore
-                        code: ({node, inline, className, children}) => {
+                        pre: ({children}) => {
+                            // const codeEl = Array.isArray(children) ? children[0] : children;
+
+                         /*   const text =
+                                Array.isArray(children)
+                                    ? children.join("")
+                                    : String(children ?? "");*/
+
+                            const text=extractText(children);
                             return (
                                 <Code isCpp visible={visible} setVisible={setVisible}
-                                      text={children ? children.toString() : ""} classname={"example-code"}/>
+                                      text={text} classname={"example-code"}/>
                             )
                         },
                         h1: ({children}) => {

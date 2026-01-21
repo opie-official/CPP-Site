@@ -1,18 +1,16 @@
-.code:hover {
 
-    cursor: pointer;
-
-}
 
 
 .code-bt {
+
+    cursor: pointer;
     transition: all 0.1s;
     opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    width: 2vw;
     aspect-ratio: 1/1;
     background: transparent;
     &>img{
@@ -22,8 +20,9 @@
         filter: brightness(10);
     }
 
-    position: absolute;
-    left: 90%;
+    /*position: absolute;*/
+    /*right: 2%;*/
+    /*left: 80%;*/
 }
 
 .code-bt-hidden {

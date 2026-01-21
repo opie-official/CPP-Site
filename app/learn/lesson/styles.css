@@ -49,7 +49,7 @@
         margin: 5% 0;
     }
 
-    & code {
+    & .code {
         font-family: "JetBrains Mono", monospace;
         background: #404040;
         padding: 0 2%;
